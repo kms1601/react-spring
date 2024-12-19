@@ -18,7 +18,8 @@ const App = () => {
 export default App;
 
 const Wrapper = styled.div`
-  height: 100%;
+  min-height: calc(100vh - 80px);
+  padding-top: 80px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;

@@ -20,6 +20,7 @@ export default Cards;
 
 const CardWrapping = styled.div`
   display: flex;
+  height: calc(100vh - 160px);
   justify-content: space-evenly;
   align-items: center;
 `;

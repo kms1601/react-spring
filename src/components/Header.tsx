@@ -1,32 +1,26 @@
 import styled from "styled-components";
-import {Link} from "react-router-dom";
+import HeaderLink from "./HeaderLink.tsx";
 
 const Header = () => {
   return (
-    <HeaderStyled>
-      <LinkStyled to={"/"}>Home</LinkStyled>
-      <LinkStyled to={"/card"}>Card</LinkStyled>
-    </HeaderStyled>
+    <StyledHeader>
+      <HeaderLink name={"Home"} to={"/"}/>
+      <HeaderLink name={"Card"} to={"/card"}/>
+    </StyledHeader>
   );
 };
 
 export default Header;
 
-const HeaderStyled = styled.header`
-  height: 5vh;
+const StyledHeader = styled.header`
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 80px;
   display: flex;
   justify-content: center;
+  background: aliceblue;
   align-items: center;
   z-index: 100000;
-`;
-
-const LinkStyled = styled(Link)`
-  margin: 0 5px 0 5px;
-  font-size: 20px;
-  font-weight: bold;
-  color: #8686e4;
-
-  &:hover {
-    color: #5252e3;
-  }
 `;

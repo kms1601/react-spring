@@ -23,10 +23,15 @@ const Card = (
       api.start({
         x: drag.offset[0],
         y: drag.offset[1],
-        scale: drag.dragging ? 1.2 : 1,
+        scale: drag.dragging ? 1.2 : 1.1,
         boxShadow: drag.dragging ? "10px 10px 10px #555" : "0px 0px 0px rgba(0,0,0,0)",
       });
     },
+    onHover: (hover) => {
+      api.start({
+        scale: hover.hovering ? 1.1 : 1,
+      })
+    }
   });
 
   const mouseDown = () => {
@@ -44,7 +49,6 @@ const Card = (
       style={{
         width: "130px",
         height: "180px",
-        background: color,
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
@@ -52,6 +56,7 @@ const Card = (
         userSelect: "none",
         borderRadius: 20,
         zIndex: zIndex[id],
+        background: color,
         ...spring,
       }}
       onMouseDown={mouseDown}

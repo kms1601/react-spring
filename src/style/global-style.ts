@@ -9,16 +9,16 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   html {
-    height: 100%;
+    min-height: 100vh;
   }
 
   body {
-    height: 100%;
+    min-height: 100%;
     font-family: "Pretendard-Regular", serif;
   }
 
   #root {
-    height: 100%;
+    min-height: 100%;
   }
 
   @font-face {
