@@ -106,4 +106,4 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-`;Eg.createRoot(document.getElementById("root")).render(Re.jsx(O.StrictMode,{children:Re.jsx(zy,{basename:"/react-spring/",children:Re.jsx(vE,{})})}));
+`;Eg.createRoot(document.getElementById("root")).render(Re.jsx(O.StrictMode,{children:Re.jsx(zy,{basename:"/",children:Re.jsx(vE,{})})}));
